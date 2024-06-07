@@ -38,6 +38,7 @@
         $query = mysqli_query($conn,$sql);#add properties
         if($query){
             $_SESSION['error'] = "Property Added!";
+            header("location: home.php");
         }else{
             $_SESSION['error'] = "Property is not Added!";
         }
