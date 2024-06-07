@@ -21,7 +21,6 @@
                     $_SESSION['name'] = $row['full_name'];
                     $_SESSION['email'] = $row['email'];
                     $_SESSION['contact'] = $row['contact'];
-                    $_SESSION['role'] = $row['role'];
                     header("location: home.php");
                 }else{
                     $_POST['error']='Password is not valid';

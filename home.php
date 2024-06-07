@@ -2,8 +2,11 @@
     require_once "config.php";
 
     session_start();
-    
     include "config.php";
+
+    $sql = "SELECT * FROM properties";
+    $post = mysqli_query($conn,$sql);#get data
+
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +23,7 @@
 </head>
 <body>
     <div class="dashboard-container">
-        <div class="nav dashboard-body-area">
+        <div class="nav left-right-margin">
             <div class="logo">
                 <h3>Real Estate Property</h3>
             </div>
@@ -38,34 +41,38 @@
                 <div class="email">
                     <i class="fa-solid fa-user"></i>
                     <?php if(isset($_SESSION['email'])) echo $_SESSION['email']; ?>
-                    (<?php if(isset($_SESSION['role'])) echo $_SESSION['role']; ?>)
+                    (<?php if(isset($_SESSION['name'])) echo $_SESSION['name']; ?>)
                 </div>
             </div>
         </div>
-        <div class="dashboard-body-area">
+        <div class="left-right-margin">
             <div class="container">
-                <section id="product1" class="section-p1">
+                <section id="property-list">
                     <div class="header">
-                        <h2>Listed Real Estate</h2>
-                        <p>select the real estates form below</p>
+                        <div class="header-info">
+                            <h2>Listed Real Estate</h2>
+                            <p>select the real estates form below</p>
+                        </div>
+                        <a href="add-property.php"><button class="add-real-estate">+ Add New Property</button></a>
                     </div>
                     <div class="pro-container">
-                        <div class="pro">
-                            <img src="Img/Products/n1.jpg" alt="">
-                            <div class="des">
-                                <span>adidas</span>
-                                <h5>Cartoon Astronaut T-Shirts</h5>
-                                <div class="star">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
+                        <?php if($post!=null){ ?>
+                            <?php foreach($post as $row){ ?>
+                                <div class="pro">
+                                    <img src="assets/uploads/<?php echo $row["img"];?>" alt="">
+                                    <div class="info">
+                                        <h5><?php echo $row["title"];?></h5>
+                                        <span><?php echo substr($row["description"], 0, 50)."...";?></span>
+                                        <h4>Location:- <?php echo $row["location"];?></h4>
+                                        <h4>Price:- $<?php echo $row["price"];?></h4>
+                                        <h4>Area:- <?php echo $row["size"];?> cu. m</h4>
+                                        <h4>Type:- <?php echo $row["type"];?></h4>
+                                        <h4>Postby #<?php echo $row["id"];?></h4>
+                                        <span><?php echo $row["created_at"];?></span>
+                                    </div>
                                 </div>
-                                <h4>$78</h4>
-                            </div>
-                            <div class="cartIcon"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></div>
-                        </div>
+                            <?php } ?>
+                        <?php } ?>
                     </div>
                 </section>
             </div>

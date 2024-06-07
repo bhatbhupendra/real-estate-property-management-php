@@ -1,0 +1,66 @@
+.left-right-margin {
+    padding: 5px 180px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .left-right-margin {
+        padding: 5px 20px;
+    }
+}
+
+.form-wrapper{
+    display: flex;
+    flex-direction: column;
+    border: 1px rgb(195, 195, 195) solid;
+    padding: 40px;
+    border-radius: 5px;
+    gap: 10px;
+}
+
+.form-wrapper  input {
+    border: 1px rgb(186, 186, 186) solid;
+    height: 30px;
+    width: 100%;
+    padding: 2px 10px;
+}
+
+.form-wrapper textarea {
+    width: 100%;
+    padding: 2px 10px;
+    border: 1px rgb(186, 186, 186) solid;
+}
+
+.form-wrapper select {
+    width: 200px;
+    padding: 2px 10px;
+    border: 1px rgb(186, 186, 186) solid;
+}
+
+.form-wrapper form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+    }
+    
+.form-wrapper .field{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+.form-wrapper button{
+    padding: 10px 20px;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    background: #007bff;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.form-wrapper button:hover{
+    background: #4ba2ff;
+}
