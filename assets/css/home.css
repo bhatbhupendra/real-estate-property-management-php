@@ -1,0 +1,18 @@
+.dashboard-body-area{
+    padding: 5px 180px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .dashboard-body-area {
+        padding: 5px 20px;
+    }   
+}
+
+.dashboard-body-area .container{
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px rgb(197, 197, 197) solid;
+    margin-top: 30px;
+}
+

@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+body {
+    font-family: "Manrope";
+    background-color: #fafbff;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+input,
+button {
+    outline: none;
+    border: none;
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav {
+    background: #efefef;
+    color: rgb(31, 31, 31);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media only screen and (max-width: 870px) {
+    .nav  {
+        padding: 8px 30px;
+    }
+}
+
+.user_detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 9px 31px;
+}
+
+
+.fa-regular {
+    font-size: 25px;
+    padding: 6px;
+}
+
+.logout {
+    padding-left: 10px;
+}
+
+.list ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.list ul li:hover {
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+}
+

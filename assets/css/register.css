@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+    body {
+      font-family: "Manrope";
+      background-color: #ebeced;
+    }
+  
+  .form_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+  }
+  
+  .signup_form {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    background: #e6e6e6;
+    flex-direction: column;
+    padding-bottom: 10px;
+    border: 2px solid #c8dbef;
+    box-shadow: 0 0 10px rgba(99, 99, 99, 0.1);
+    border-radius: 10px;
+    padding: 30px 40px;
+    opacity: 80%;
+  }
+  
+  .signup_form h1{
+      padding-bottom: 30px;
+  }
+  
+  .password {
+    display: flex;
+    padding-bottom: 15px;
+  }
+  
+  .field{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 25px;
+      padding-bottom: 10px;
+  }
+  
+  .field input{
+      font-size: 13px;
+      padding: 5px;
+  }
+
+  .field .role {
+    font-size: 13px;
+    padding: 5px;
+    width: 52%;
+  }  
+  
+  .field label {
+    min-width: 120px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  .password_eye {
+    position: relative;
+  }
+  .password_eye i {
+    position: absolute;
+    right: 9px;
+    top: 8px;
+  }
+
+  .button_submit{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .button_submit input{
+    padding: 8px 55px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    background: #0a9ca4;
+    color: #fff;
+    border-radius: 5px; 
+    cursor: pointer;
+    
+  }
+  .button_submit input:hover {
+    scale: 1.1;
+  }
+  

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+    body {
+      font-family: "Manrope";
+      background-color: #fafbff;
+    }
+  
+  .form_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+  }
+  
+  .signup_form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f6f6f6;
+    flex-direction: column;
+    padding-bottom: 10px;
+    border: 2px solid #b1c7e0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 50px;
+    background-color: rgb(234, 234, 234);
+    opacity: 80%;
+  }
+  
+  .signup_form h1{
+      padding-bottom: 15px;
+  }
+  
+  .password {
+    display: flex;
+    padding-top:15px;
+    padding-bottom: 15px;
+  }
+  
+  .field{
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .field input{
+      font-size: 20px;
+      padding: 10px;
+  }
+  
+  
+  .field label {
+    min-width: 120px;
+    font-size: 20px;
+    font-weight: 400;
+  
+  }
+  
+  .password_eye {
+    position: relative;
+  }
+  .password_eye i {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  
+  .button_submit input{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    height: 40px;
+    width: 80px;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    background: #0c529e;
+    color: #f2f2f2;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
