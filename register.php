@@ -12,9 +12,9 @@
         }
     }
 
-  function createUser($name,$email,$contact,$role,$hashed_password){
+  function createUser($name,$email,$contact,$hashed_password){
         include "config.php";
-        $sql = "INSERT INTO users (full_name, email, contact,role , password) VALUES ('{$name}', '{$email}', '{$contact}','{$role}', '{$hashed_password}')";
+        $sql = "INSERT INTO users (full_name, email, contact , password) VALUES ('{$name}', '{$email}', '{$contact}', '{$hashed_password}')";
         $query = mysqli_query($conn,$sql);#Register a new user
         if($query){
             return TRUE;
@@ -27,13 +27,12 @@
         $name = trim($_POST["fullName"]); 
         $email = trim($_POST["email"]);
         $contact = trim($_POST["contact"]);
-        $role = trim($_POST["role"]);
         $password = trim($_POST['password']); 
         $hashed_password = password_hash($password, PASSWORD_BCRYPT);
         if(!empty(trim($_POST["email"])) && !empty(trim($_POST["password"]))){
             if(filter_var($email, FILTER_VALIDATE_EMAIL)){
                 if(!checkEmail($email)){
-                        if(createUser($name,$email,$contact,$role,$hashed_password)){
+                        if(createUser($name,$email,$contact,$hashed_password)){
                             header("location: login.php");
                         }else{    
                             $_POST['error']='Contact Admin';
@@ -77,13 +76,6 @@
           <div class="field contact">
             <label for="contact">Contact</label>
             <input type="text" id="contact" name="contact" placeholder="Enter your contact">
-          </div>
-          <div class="field role">
-            <label for="role">Role</label>
-            <select class="role" id="role" name="role">
-              <option value="agent">agent</option>
-              <option value="client">client</option>
-            </select>
           </div>
           <div class="field password">
               <label for="password">Password</label>
